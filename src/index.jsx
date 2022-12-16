@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Nav from './components/nav/nav'
 import App from './App'
 
 export default function createApp() {

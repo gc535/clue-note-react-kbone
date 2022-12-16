@@ -1,0 +1,30 @@
+
+.charactor-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+  
+.button-style {
+  border-radius: 10px;
+  text-align: center;
+  height: 30px;
+  width: 50px;
+}
+
+.table-content {
+  justify-content: center;  
+  border-collapse: collapse;
+}
+
+th {
+  border: 1px solid #999;
+  padding: 0.5rem;
+  text-align: left;
+}
+td {
+  border: 1px solid #999;
+  padding: 0.5rem;
+  text-align: center;
+}
+  

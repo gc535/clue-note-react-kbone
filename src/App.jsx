@@ -8,7 +8,7 @@ const App = () => {
   return (
     <div className='app'>
       <Nav />
-      <SelectorPopUp show={selectorShow}/>
+      <SelectorPopUp />
       <CharactorTable />
     </div>
   )

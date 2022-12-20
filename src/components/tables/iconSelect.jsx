@@ -16,28 +16,17 @@ const Icons = [
 
 const SelectorPopUp = () => {
   const { inputRequest, setInputRequest } = useContext(Context)
-  const [show, setShow] = useState(true)
-  const [iconCallBack,  SetIconCallBack] = useState(null)
+  const [show, setShow] = useState(false)
 
   useEffect(() => {
-    console.log(inputRequest)
-    if (inputRequest) {
-      SetIconCallBack(inputRequest.changeRequest)
+    if (inputRequest.hasRequest) {
       setShow(true);
     }
   }, [inputRequest]);
 
-  const selectHandler = (icon, callback) => {
-    console.log(callback)
-    callback(icon)
-    SetIconCallBack(null)
-    setInputRequest(null)
-  }
-
   const closeHandler = () => {
     setShow(false);
-    SetIconCallBack(null)
-    setInputRequest(null);
+    setInputRequest({hasRequest: false, handler: null});
   };
 
   return (
@@ -48,10 +37,7 @@ const SelectorPopUp = () => {
 
       <ul className='icon-container'>
         { Icons.map((e, i) => <li key={i}>
-          {<Icon 
-            icon={e} 
-            handler={selectHandler} 
-            callback={iconCallBack}/>}
+          {<Icon icon={e} onClick={closeHandler} />}
          </li>) }
       </ul>
 
@@ -64,13 +50,8 @@ const SelectorPopUp = () => {
   )
 }
 
-const Icon = ({icon, handler, callback}) => {
-  const [func, setFunc] = useState(null)
-
-  useEffect(() => {
-    console.log(callback)
-    setFunc(callback)
-  }, [callback])
+const Icon = ({icon, onClick}) => {
+  const { inputRequest } = useContext(Context)
 
   return (
     <div>
@@ -79,7 +60,10 @@ const Icon = ({icon, handler, callback}) => {
         onClick={()=> {
           console.log("selection made")
           console.log(icon)
-          handler(icon, func);
+          if (inputRequest.handler) {
+            inputRequest.handler(icon)
+          }
+          onClick()
         }}
       />
     </div>

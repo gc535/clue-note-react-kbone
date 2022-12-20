@@ -1,19 +1,47 @@
 .popup-box{
-    display: flex;
-    position: fixed;
-    width: 80%;
-    height: 80%;
-    top: 10%;
-    left: 10%;
-    background: rgba(0, 0, 0, 0.9);
-    align-items: center;
-    justify-content: center;
+  top: 10%;
+  width: 80%;;
+  max-width: 540px;
+  padding-top: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-bottom: 1rem;
+  row-gap: 1rem;
+  background: rgba(0, 0, 0, 0.9);
+  align-items: center;
+  justify-content: top;
+}
+
+.popup-position{
+  position: fixed;
+  flex-direction: column;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.icon-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: aqua;
+  padding: 0;
+  row-gap: 0.5rem;
+  column-gap: 0.5rem;
+  list-style: none;
+  border: 1px solid silver;
+}
+
+
+.icon-item{
+  border: 1px solid #999;
+  padding: 0.4rem;
+  height: 18px;
+  width: 18px;
 }
 
 .cancel-button{
-  position: absolute;
-  bottom: 4%;
+  position: relative;
+  bottom: 10%;
   width: 80px;
   height: 30px;
 }
-

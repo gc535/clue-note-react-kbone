@@ -6,7 +6,7 @@ import SelectorPopUp from './components/tables/iconSelect'
 const App = () => {
   const { selectorShow } = useContext(Context)
   return (
-    <div>
+    <div className='app'>
       <Nav />
       <SelectorPopUp show={selectorShow}/>
       <CharactorTable />

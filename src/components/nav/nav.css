@@ -1,6 +1,7 @@
 
 .content {
   display: flex;
+  flex-direction: row;
   justify-content: end;
   align-items: center;
   gap: 0 15px;
@@ -10,8 +11,21 @@
   padding: 10px 0;
 }
 
-.button-style {
+.locale-dropdown {
+  margin-right: auto;
   border-radius: 10px;
+  border-color: black;
+  border-width: 2px;
+  width: 25%;
+  max-width: 120px;
+  height: 25px;
+  padding: 0.2rem;
+}
+
+.button-style {
+  border-color: black;
+  border-radius: 10px;
+  border-width: 2px;
   text-align: center;
   height: 30px;
   width: 50px;

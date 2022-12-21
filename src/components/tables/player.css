@@ -6,6 +6,8 @@
 }
 
 .player-table-header {
+  display: flex;
+  justify-content: center;
   padding: 0.5rem;
 }
 
@@ -13,10 +15,16 @@
   justify-content: center;  
 }
 
+span {
+  font-size: medium;
+  color: yellow;
+}
+
 th {
   border: 1px solid #999;
   padding: 0.5rem;
   width: 25%;
+  height: 30px;
   text-align: left;
 }
 td {

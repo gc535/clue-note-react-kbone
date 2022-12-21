@@ -33,7 +33,7 @@ const SelectorPopUp = () => {
     <div className='popup-box popup-position' 
       style={{visibility: show ? "visible" : "hidden"}}
     > 
-      <div>Choose Icon</div>
+      <span>Choose Icon</span>
 
       <ul className='icon-container'>
         { Icons.map((e, i) => <li key={i}>

@@ -10,14 +10,16 @@ import './charactor.css'
 const CharactorTable = () => {
   const { locale } = useContext(Context)
   var charactors = labels.charactor[locale]
+  var header = labels.charactor_header[locale]
 
   useEffect(() => {
     charactors = labels.charactor[locale]
+    header = labels.charactor_header[locale]
   }, [locale])
 
   return (
     <div className="bg-color-green charactor-content">
-      <div className='bg-color-blue charactor-table-header'>人物表</div>
+      <div className='bg-color-blue charactor-table-header'><span>{header}</span></div>
       <table className='table-content bg-color-yellow' >
       <tbody>{charactors.map((c, i) => 
         (<tr key={i}>
@@ -26,31 +28,8 @@ const CharactorTable = () => {
         </tr>))
       }</tbody>
     </table>
-
-      这 <br/>
-      是 <br/>
-      人 <br/>
-      物 <br/>
-      表 <br/>
     </div>
   )
 }
-
-//const TableInput = () => {
-//  const [temp, setTemp] = useState(0)
-//  const TableInputs = [add, div]
-//
-//  return (
-//    <div>
-//      <img className='input-TableInput' 
-//        src={TableInputs[temp]} 
-//        onClick={()=> {
-//          setTemp((temp + 1)%2); console.log("clicked")
-//          
-//        }}
-//      />
-//    </div>
-//  )
-//}
 
 export default CharactorTable

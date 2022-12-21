@@ -11,14 +11,16 @@ import './player.css'
 const PlayerTable = () => {
   const { locale } = useContext(Context)
   var player = labels.player[locale]
+  var header = labels.player_header[locale]
 
   useEffect(() => {
     player = labels.player[locale]
+    header = labels.player_header[locale]
   }, [locale])
 
   return (
     <div className="bg-color-green player-content">
-      <div className='bg-color-blue player-table-header'>人物表</div>
+      <div className='bg-color-blue player-table-header'><span>{header}</span></div>
       <table className='player-table-content bg-color-yellow' >
       <tbody> 
         <tr>

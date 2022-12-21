@@ -5,6 +5,7 @@ export const Context = React.createContext();
 
 export const ContextProvider = ({children}) =>{
   const [ locale, setLocale ] = useState('ch')
+  const [ hide, setHide ] = useState(false)
   const [ clearInput, setClearInput ] = useState(true)
   const [ inputRequest, setInputRequest ] = useState({hasRequest: false, handler: null})
 
@@ -13,6 +14,8 @@ export const ContextProvider = ({children}) =>{
       value ={{
         locale, 
         setLocale,
+        hide, 
+        setHide,
         clearInput,
         setClearInput,
         inputRequest,

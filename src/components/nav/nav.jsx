@@ -1,30 +1,27 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './nav.css'
 import '../../App.css'
+import { Context } from '../context/context'
 
-function Nav() {
-  const [count, setCount] = useState(0)
-  
-  const [] = []
+const Nav = () => {
+
   return (
     <div className='bg-color-red'>
-      <span>{count}</span>
       <div className='content'>
         <ResetButton />
         <ShowHideButton />
       </div>
-      <div onClick={clickHandle}>跳转</div>
+      {/* <div onClick={clickHandle}>跳转</div> */}
     </div>
   )
 }
 
-function ResetButton() {
+const ResetButton = () => {
+  const { setClearInput } = useContext(Context)
+
   const localization = "重置";
   return (
-    <button className='button-style' 
-      type='button' 
-      onClick={() => setCount(count - 1)}
-    >
+    <button className='button-style' type='button' onClick={() => setClearInput(true)}>
       {localization}
     </button>        
 
@@ -48,14 +45,14 @@ function ShowHideButton() {
   )
 }
 
-function clickHandle() {
-  if ('undefined' != typeof wx && wx.getSystemInfoSync) {
-    wx.navigateTo({
-      url: '../log/index?id=1',
-    })
-  } else {
-    location.href = 'log.html'
-  }
-}
+//function clickHandle() {
+//  if ('undefined' != typeof wx && wx.getSystemInfoSync) {
+//    wx.navigateTo({
+//      url: '../log/index?id=1',
+//    })
+//  } else {
+//    location.href = 'log.html'
+//  }
+//}
 
 export default Nav

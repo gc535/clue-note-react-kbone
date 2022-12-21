@@ -1,43 +1,30 @@
-import React, { useState } from 'react'
+import React, { useContext, useEffect } from 'react'
+
+import { TableInput } from './input'
+import { Context } from '../context/context'
+import { labels } from '../localization'
+import { numPlayers } from '../constant'
 
 import './charactor.css'
-import TableInput from './tableInput'
-import '../../App.css'
-
 
 const CharactorTable = () => {
+  const { locale } = useContext(Context)
+  var charactors = labels.charactor[locale]
 
-  const players = 6;
+  useEffect(() => {
+    charactors = labels.charactor[locale]
+  }, [locale])
+
   return (
     <div className="bg-color-green charactor-content">
-      <div className='bg-color-blue'>人物表</div>
+      <div className='bg-color-blue charactor-table-header'>人物表</div>
       <table className='table-content bg-color-yellow' >
-      <tbody>
-        <tr>
-          <th>填充</th>
-          {[...Array(players)].map((e, i) => <td key={i}>{<TableInput />}</td>)}       
-        </tr>
-        <tr>
-          <th>填充</th>
-          {[...Array(players)].map((e, i) => <td key={i}>{<TableInput />}</td>)}       
-        </tr>
-        <tr>
-          <th>填充</th>
-          {[...Array(players)].map((e, i) => <td key={i}>{<TableInput />}</td>)}       
-        </tr>
-        <tr>
-          <th>填充</th>
-          {[...Array(players)].map((e, i) => <td key={i}>{<TableInput />}</td>)}       
-        </tr>
-        <tr>
-          <th>填充</th>
-          {[...Array(players)].map((e, i) => <td key={i}>{<TableInput />}</td>)}       
-        </tr>
-        <tr>
-          <th>填充</th>
-          {[...Array(players)].map((e, i) => <td key={i}>{<TableInput />}</td>)}       
-        </tr>
-      </tbody>
+      <tbody>{charactors.map((c, i) => 
+        (<tr key={i}>
+          <th>{c}</th>
+          {[...Array(numPlayers)].map((e, i) => <td key={i}>{<TableInput />}</td>)}
+        </tr>))
+      }</tbody>
     </table>
 
       这 <br/>

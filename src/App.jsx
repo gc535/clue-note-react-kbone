@@ -1,14 +1,14 @@
 import React, { useContext } from 'react'
 import { Nav, CharactorTable } from "./components"
-import { Context } from './components/context/context'
 import SelectorPopUp from './components/tables/iconSelect'
+import PlayerTable from './components/tables/player'
 
 const App = () => {
-  const { selectorShow } = useContext(Context)
   return (
     <div className='app'>
-      <Nav />
       <SelectorPopUp />
+      <Nav />
+      <PlayerTable />
       <CharactorTable />
     </div>
   )

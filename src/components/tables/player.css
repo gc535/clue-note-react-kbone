@@ -1,15 +1,15 @@
 
-.charactor-content {
+.player-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-  
-.charactor-table-header {
+
+.player-table-header {
   padding: 0.5rem;
 }
 
-.charactor-table-content {
+.player-table-content {
   justify-content: center;  
 }
 

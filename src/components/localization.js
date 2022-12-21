@@ -6,12 +6,12 @@ export const labels = {
 
   hide: {
     'en': 'Hide',
-    'ch': '隐藏',
+    'ch': '隱藏',
   },
 
   show: {
     'en': 'Show',
-    'ch': '显示',
+    'ch': '顯示',
   },
 
   reset: {
@@ -56,6 +56,6 @@ export const labels = {
 
   room: {
     'en': ['Kitchen', 'Ballroom	', 'Conservatory', 'Dining Room', 'Billiard Room', 'Library', 'Hall', 'Lounge', 'Study'],
-    'ch': ['厨房', '舞廳', '温室', '饭厅', '桌球室', '图书室', '大堂', '休息室', '书房'],
+    'ch': ['廚房', '舞廳', '溫室', '飯廳', '桌球室', '圖書室', '大堂', '休息室', '書房'],
   },
 }

@@ -12,8 +12,8 @@ const Nav = () => {
         <LocaleDropDown />
         <ResetButton />
         <ShowHideButton />
-      </div>
       {/* <div onClick={clickHandle}>跳转</div> */}
+      </div>
     </div>
   )
 }

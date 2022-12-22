@@ -30,12 +30,12 @@ const SelectorPopUp = () => {
   };
 
   return (
-    <div className='popup-box popup-position' 
-      style={{visibility: show ? "visible" : "hidden"}}
+    <div className='popup-box popup-position popup-slide-in' 
+      style={{visibility: show ? "visible" : "hidden", top: show ? "20%" : "-20%"}}
     > 
-      <span>Choose Icon</span>
+      <div className='icon-input-header'>Choose Icon</div>
 
-      <ul className='icon-container'>
+      <ul className=' icon-container '>
         { Icons.map((e, i) => <li key={i}>
           {<Icon icon={e} onClick={closeHandler} />}
          </li>) }

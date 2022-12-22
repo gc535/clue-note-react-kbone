@@ -1,0 +1,36 @@
+
+.curtain-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(100, 100, 100, 1);
+}
+
+.curtain-content {
+    display: flex;
+    background: rgba(100, 100, 100, 1);
+    justify-content: center;    
+}
+
+.curtain-table-header {
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.curtain-position{
+    position: absolute;
+    width: inherit;
+    height: 100%;
+    max-width: 1080px; 
+}
+  
+.curtain-slide {
+  overflow: hidden;
+  transition: max-height 0.25s ease-in;
+}
+
+.curtain-icon {
+  height: 100px;
+  width: 100px;  
+}

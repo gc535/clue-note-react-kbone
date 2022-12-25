@@ -3,11 +3,11 @@ import './iconSelect.css'
 
 import { Context } from '../context/context'
 
-import nil from '../../../assets/icons/nil.png'
-import mul from '../../../assets/icons/mul.svg'
-import sub from '../../../assets/icons/sub.svg'
-import add from '../../../assets/icons/add.svg'
-import div from '../../../assets/icons/div.svg'
+import nil from '../../../img/icons/nil.png'
+import mul from '../../../img/icons/mul.svg'
+import sub from '../../../img/icons/sub.svg'
+import add from '../../../img/icons/add.svg'
+import div from '../../../img/icons/div.svg'
 
 
 const Icons = [
@@ -15,23 +15,23 @@ const Icons = [
 ]
 
 const SelectorPopUp = () => {
-  const { inputRequest, setInputRequest } = useContext(Context)
+  const { iconInputRequest, setIconInputRequest } = useContext(Context)
   const [show, setShow] = useState(false)
 
   useEffect(() => {
-    if (inputRequest.hasRequest) {
+    if (iconInputRequest.hasRequest) {
       setShow(true);
     }
-  }, [inputRequest]);
+  }, [iconInputRequest]);
 
   const closeHandler = () => {
     setShow(false);
-    setInputRequest({hasRequest: false, handler: null});
+    setIconInputRequest({hasRequest: false, handler: null});
   };
 
   return (
     <div className='popup-box popup-position popup-slide-in' 
-      style={{visibility: show ? "visible" : "hidden", top: show ? "20%" : "-20%"}}
+      style={{visibility: show ? "visible" : "hidden", top: show ? "10%" : "-20%"}}
     > 
       <div className='icon-input-header'>Choose Icon</div>
 
@@ -51,7 +51,7 @@ const SelectorPopUp = () => {
 }
 
 const Icon = ({icon, onClick}) => {
-  const { inputRequest } = useContext(Context)
+  const { iconInputRequest } = useContext(Context)
 
   return (
     <div>
@@ -60,8 +60,8 @@ const Icon = ({icon, onClick}) => {
         onClick={()=> {
           console.log("selection made")
           console.log(icon)
-          if (inputRequest.handler) {
-            inputRequest.handler(icon)
+          if (iconInputRequest.handler) {
+            iconInputRequest.handler(icon)
           }
           onClick()
         }}

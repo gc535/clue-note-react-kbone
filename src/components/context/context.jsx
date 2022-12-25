@@ -7,7 +7,9 @@ export const ContextProvider = ({children}) =>{
   const [ locale, setLocale ] = useState('ch')
   const [ hide, setHide ] = useState(false)
   const [ clearInput, setClearInput ] = useState(true)
-  const [ inputRequest, setInputRequest ] = useState({hasRequest: false, handler: null})
+  const [ iconInputRequest, setIconInputRequest ] = useState({hasRequest: false, handler: null})
+  const [ playerInputRequest, setPlayerInputRequest ] = useState({hasRequest: false, handler: null})
+
 
   return(
     <Context.Provider
@@ -18,8 +20,10 @@ export const ContextProvider = ({children}) =>{
         setHide,
         clearInput,
         setClearInput,
-        inputRequest,
-        setInputRequest
+        iconInputRequest,
+        setIconInputRequest,
+        playerInputRequest, 
+        setPlayerInputRequest
       }}
     >
       {children}

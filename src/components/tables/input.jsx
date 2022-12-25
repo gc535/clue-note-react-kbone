@@ -1,15 +1,15 @@
 import React, { useState, useContext, useEffect } from 'react'
 import { Context } from '../context/context'
 
-import nil from '../../../assets/icons/nil.png'
+import nil from '../../../img/icons/nil.png'
 import './input.css'
 
 export const TableInput = () => {
-  const { clearInput, setClearInput, setInputRequest } = useContext(Context) 
+  const { clearInput, setClearInput, setIconInputRequest } = useContext(Context) 
   const [icon, setIcon] = useState(nil)
 
   const clickHandler = () => {
-    setInputRequest({hasRequest: true, handler: setIcon})
+    setIconInputRequest({hasRequest: true, handler: setIcon})
     setClearInput(false)
   }
 
@@ -27,8 +27,13 @@ export const TableInput = () => {
 }
 
 export const PlayerInput = ({id}) => {
-  const { clearInput, setClearInput, setInputRequest } = useContext(Context) 
-  const [ player, setPlayer] = useState(id)
+  const { clearInput, setClearInput, setPlayerInputRequest } = useContext(Context) 
+  const [ player, setPlayer ] = useState(id)
+
+  const clickHandler = () => {
+    setPlayerInputRequest({hasRequest: true, handler: setPlayer})
+    setClearInput(false)
+  }
 
   const handleChange = (e) => {
     setPlayer(e.target.value)
@@ -43,12 +48,9 @@ export const PlayerInput = ({id}) => {
 
   return (
     <div className='player-input-container'>
-      <input 
-        type="text" 
-        maxLength="2" 
-        placeholder={player} 
-        value={player}
-        onChange={(e) => handleChange(e)}/>
+      <div 
+        className='player-input'
+        onClick={() => { console.log(player); clickHandler()} }>{player}</div>
     </div>
   )
 }

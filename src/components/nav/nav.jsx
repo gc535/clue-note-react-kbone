@@ -39,7 +39,7 @@ const LocaleDropDown = () => {
 }
 
 const ResetButton = () => {
-  const { locale, setClearInput  } = useContext(Context)
+  const { locale, setClearInput } = useContext(Context)
   
   var display = labels.reset[locale]
   useEffect(() => {
@@ -47,9 +47,11 @@ const ResetButton = () => {
   }, [locale])
 
   return (
-    <button className='button-style' type='button' onClick={() => setClearInput(true)}>
-      {display}
-    </button>        
+    <div>
+      <button className='button-style' type='button' onClick={() => setClearInput(true)}>
+        {display}
+      </button>        
+    </div>
 
   )
 }
@@ -63,15 +65,14 @@ function ShowHideButton() {
   }, [locale])
 
   return (
-    //<button class='button-hide' type='button' onClick={() => setShowHide}>
-    //  <img src="https://i.imgur.com/tXLqhgC.png" width="90" height="90" alt="submit" /> 
-    //</button>
-    <button className='button-style' 
-      type='button' 
-      onClick={() => setHide(!hide)}
-    >
-      {display}
-    </button>
+    <div>
+      <button className='button-style' 
+        type='button' 
+        onClick={() => setHide(!hide)}
+      >
+        {display}
+      </button>
+    </div>
 
   )
 }

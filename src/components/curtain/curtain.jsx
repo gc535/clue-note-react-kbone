@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react"
 import { Context } from "../context/context"
 
-import icon from '../../../assets/icons/hide.svg'
+import icon from '../../../img/icons/hide.svg'
 import "./curtain.css"
 
 const Curtain = () => {

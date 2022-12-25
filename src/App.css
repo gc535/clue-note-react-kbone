@@ -6,6 +6,16 @@
   margin: 0 auto;
 }
 
+.popup-canvas {
+  position: absolute;
+  background-color: rgba(220, 0, 0, 0.2);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
 .bg-color-red {
   background-color: rgba(220, 0, 0, 1);
 }

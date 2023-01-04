@@ -29,7 +29,7 @@ const PlayerInputPopUp = () => {
   }
 
   return (
-    <div className='popup-box popup-position popup-slide-in' 
+    <div className='input-popup-box input-popup-position popup-slide-in' 
       style={{visibility: show ? "visible" : "hidden", top: show ? "10%" : "-20%"}}
     > 
       <div className='icon-input-header'>Set Player Label</div>

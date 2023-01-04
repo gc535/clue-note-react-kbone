@@ -19,6 +19,11 @@ export const labels = {
     'ch': '重置',
   },
 
+  cancel: {
+    'en': 'Cancel',
+    'ch': '取消',
+  },
+
   player_header: {
     'en': 'Player',
     'ch': '玩家',

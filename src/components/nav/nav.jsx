@@ -27,12 +27,12 @@ const LocaleDropDown = () => {
   }, [locale])
 
   const handleChange = () => {
-      var lang = document.getElementById("locale-dropdown").value;
+      var lang = document.getElementById("locale").value;
       setLocale(lang)
   }
  
   return (
-      <select id='locale-dropdown' className='locale-dropdown' onChange={() => handleChange()}>
+      <select id='locale' className='locale-input-dropdown' onChange={() => handleChange()}>
         {lang.map((l, i) => <option key={i} value={l.code}>{l.tag}</option>)}
       </select>
   )
@@ -48,9 +48,7 @@ const ResetButton = () => {
 
   return (
     <div>
-      <button className='button-style' type='button' onClick={() => setClearInput(true)}>
-        {display}
-      </button>        
+      <input className='button-style' type='button' value={display} onClick={() => setClearInput(true)}/>
     </div>
 
   )
@@ -66,12 +64,7 @@ function ShowHideButton() {
 
   return (
     <div>
-      <button className='button-style' 
-        type='button' 
-        onClick={() => setHide(!hide)}
-      >
-        {display}
-      </button>
+      <input className='button-style' type='button' value={display} onClick={() => setHide(!hide)}/>
     </div>
 
   )

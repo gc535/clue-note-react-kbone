@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react'
-import './iconSelect.css'
-
 import { Context } from '../context/context'
+import { labels } from '../localization'
+
+import './iconSelect.css'
 
 import nil from '../../../img/icons/nil.png'
 import mul from '../../../img/icons/mul.svg'
@@ -15,7 +16,7 @@ const Icons = [
 ]
 
 const SelectorPopUp = () => {
-  const { iconInputRequest, setIconInputRequest } = useContext(Context)
+  const { locale, iconInputRequest, setIconInputRequest } = useContext(Context)
   const [show, setShow] = useState(false)
 
   useEffect(() => {
@@ -24,16 +25,22 @@ const SelectorPopUp = () => {
     }
   }, [iconInputRequest]);
 
+  
+  var display = labels.cancel[locale]
+  useEffect(() => {
+    display = labels.cancel[locale]
+  }, [locale])
+
   const closeHandler = () => {
     setShow(false);
     setIconInputRequest({hasRequest: false, handler: null});
   };
 
   return (
-    <div className='popup-box popup-position popup-slide-in' 
+    <div className='icon-popup-box icon-popup-position popup-slide-in' 
       style={{visibility: show ? "visible" : "hidden", top: show ? "10%" : "-20%"}}
     > 
-      <div className='icon-input-header'>Choose Icon</div>
+      <div className='icon-input-header'>Choose con</div>
 
       <ul className=' icon-container '>
         { Icons.map((e, i) => <li key={i}>
@@ -41,11 +48,14 @@ const SelectorPopUp = () => {
          </li>) }
       </ul>
 
-      <button className='cancel-button'
-        onClick={closeHandler}
+      {/* <button className='cancel-button'
+        onClick={() => closeHandler}
       >
-        取消
-      </button>
+        {display}
+      </button> */}
+
+      <input className='cancel-button' type='button' value={display} onClick={closeHandler} />
+
     </div>
   )
 }

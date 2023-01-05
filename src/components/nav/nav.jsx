@@ -22,6 +22,9 @@ const LocaleDropDown = () => {
   const { locale, setLocale } = useContext(Context)
   var lang = labels.locale[locale]
 
+  const [ showDropdown, setShowDropdown ] = useState(false)
+
+
   useEffect(() => {
     lang = labels.locale[locale]
   }, [locale])
@@ -30,11 +33,28 @@ const LocaleDropDown = () => {
       var lang = document.getElementById("locale").value;
       setLocale(lang)
   }
+
+  const handleSelect = (newLang) => {
+    setLocale(newLang.code)
+    setShowDropdown(false)
+}
  
   return (
-      <select id='locale' className='locale-input-dropdown' onChange={() => handleChange()}>
-        {lang.map((l, i) => <option key={i} value={l.code}>{l.tag}</option>)}
-      </select>
+      // <select id='locale' className='locale-input-dropdown' onChange={() => handleChange()}>
+      //   {lang.map((l, i) => <option key={i} value={l.code}>{l.tag}</option>)}
+      // </select>
+      <div className='locale-input-container'>
+        <input className='locale-input-button' type='button' value={labels.language[locale]} onClick={() => setShowDropdown(!showDropdown)}/>
+        <ul className='locale-input-dropdown'
+          style={{ 
+            overflow: 'hidden',
+            height: showDropdown ? "50px" : "0px",
+            transition: showDropdown ? "height 0.15s ease-in" : "height 0.15s ease-out"
+          }}
+        >
+          {lang.map((l, i) => <li className='locale-input-element' key={i} value={l} onClick={() => handleSelect(l)}>{l.tag}</li>)}
+        </ul>
+      </div>
   )
 }
 

@@ -42,7 +42,7 @@ const SelectorPopUp = () => {
     > 
       <div className='icon-input-header'>Choose con</div>
 
-      <ul className=' icon-container '>
+      <ul className='icon-container '>
         { Icons.map((e, i) => <li key={i}>
           {<Icon icon={e} onClick={closeHandler} />}
          </li>) }

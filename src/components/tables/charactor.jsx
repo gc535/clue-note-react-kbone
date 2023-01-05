@@ -9,11 +9,11 @@ import './charactor.css'
 
 const CharactorTable = () => {
   const { locale } = useContext(Context)
-  var charactors = labels.charactor[locale]
+  var charactors = labels.room[locale]
   var header = labels.charactor_header[locale]
 
   useEffect(() => {
-    charactors = labels.charactor[locale]
+    charactors = labels.room[locale]
     header = labels.charactor_header[locale]
   }, [locale])
 

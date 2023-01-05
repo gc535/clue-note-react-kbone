@@ -8,9 +8,7 @@
 .player-table-header {
   display: flex;
   justify-content: center;
-  padding: 0.5rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 0.3rem;
 }
 
 .player-table-content {
@@ -22,7 +20,7 @@ span {
   color: yellow;
 }
 
-th {
+/* th {
   border: 1px solid #999;
   padding: 0.5rem;
   width: 25%;
@@ -35,6 +33,6 @@ td {
   width: 12.5%;
   text-align: center;
 }
-
+ */
 
   

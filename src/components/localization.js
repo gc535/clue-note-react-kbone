@@ -1,7 +1,12 @@
 export const labels = {
+  language: {
+    'en': 'English',
+    'ch': '中文',    
+  },
+
   locale: {
-    'en': [{code:'ch', tag:'Chinese'}, {code:'en', tag:'English'}],
-    'ch': [{code:'ch', tag:'中文'}, {code:'en', tag:'英文'}],    
+    'en': [{code:'ch', tag:'中文'}, {code:'en', tag:'English'}],
+    'ch': [{code:'ch', tag:'中文'}, {code:'en', tag:'English'}],    
   },
 
   hide: {

@@ -13,14 +13,10 @@
 } */
   
 .table-input-icon {
-  height: 20px;
-  width: 20px;
+  height: 12px;
+  width: 12px;
 }
 
-.player-input-icon {
-  height: 20px;
-  width: 20px;
-}
 
 .player-input-container {
   height:100%;

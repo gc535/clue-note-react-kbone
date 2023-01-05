@@ -1,6 +1,7 @@
 
 .content {
   display: flex;
+  height: 20px;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
@@ -9,24 +10,17 @@
   margin-left: 20px;
   margin-right: 20px;
   padding: 10px 0 ;
+  background-color: green;
 }
 
-.locale-dropdown {
-  display: flex;
+.content div:first-child {
   margin-right: auto;
-  border-radius: 10px;
-  border-color: black;
-  border-width: 2px;
-  width: 25%;
-  max-width: 120px;
-  padding: 0.2rem;
-  font-size: small;
 }
 
-.locale-input-dropdown {
-  border: 3px;
-  border-color: white;
-  height: 20px;
+
+.locale-input-button {
+  display: flex;
+  border: 1px solid black;
   width: 100px;
   padding: 0;
   margin: 0;
@@ -37,6 +31,24 @@
   align-items: center;
   color: black;
   background-color: white;
+}
+
+.locale-input-dropdown {
+  position: absolute;
+  flex-direction: column;
+  list-style: none;
+  border: 1px solid black;
+  width: 98px;
+  padding: 0;
+  margin: 0;
+  font-size: small;
+  text-align: center;
+  color: black;
+  background-color: white;
+}
+
+.locale-input-element {
+  margin: 0.3rem 0;
 }
 
 .button-style {

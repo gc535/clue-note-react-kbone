@@ -5,24 +5,24 @@ import { Context } from '../context/context'
 import { labels } from '../localization'
 import { numPlayers } from '../constant'
 
-import './charactor.css'
+import './weapon.css'
 import './table.css'
 
-const CharactorTable = () => {
+const WeaponTable = () => {
   const { locale } = useContext(Context)
-  var charactors = labels.charactor[locale]
-  var header = labels.charactor_header[locale]
+  var weapons = labels.weapon[locale]
+  var header = labels.weapon_header[locale]
 
   useEffect(() => {
-    charactors = labels.charactor[locale]
-    header = labels.charactor_header[locale]
+    weapons = labels.weapon[locale]
+    header = labels.weapon_header[locale]
   }, [locale])
 
   return (
-    <div className="charactor-content">
-      <div className='charactor-table-header'><span>{header}</span></div>
+    <div className="weapon-content">
+      <div className='weapon-table-header'><span>{header}</span></div>
       <table className='table-content' >
-      <tbody>{charactors.map((c, i) => 
+      <tbody>{weapons.map((c, i) => 
         (<tr key={i}>
           <th>{c}</th>
           {[...Array(numPlayers)].map((e, i) => <td key={i}>{<TableInput />}</td>)}
@@ -33,4 +33,4 @@ const CharactorTable = () => {
   )
 }
 
-export default CharactorTable
+export default WeaponTable

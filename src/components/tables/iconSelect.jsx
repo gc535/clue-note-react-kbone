@@ -21,15 +21,22 @@ const SelectorPopUp = () => {
 
   useEffect(() => {
     if (iconInputRequest.hasRequest) {
-      setShow(true);
+      setShow(true)
     }
   }, [iconInputRequest]);
 
-  
-  var display = labels.cancel[locale]
+  //////////////// locale display related ////////////////
+  var icon_title = labels.choose_icon[locale]
   useEffect(() => {
-    display = labels.cancel[locale]
+    icon_title = labels.choose_icon[locale]
   }, [locale])
+
+  var button_display = labels.cancel[locale]
+  useEffect(() => {
+    button_display = labels.cancel[locale]
+  }, [locale])
+  //////////////// locale display related ////////////////
+
 
   const closeHandler = () => {
     setShow(false);
@@ -40,21 +47,14 @@ const SelectorPopUp = () => {
     <div className='icon-popup-box icon-popup-position popup-slide-in' 
       style={{visibility: show ? "visible" : "hidden", top: show ? "10%" : "-20%"}}
     > 
-      <div className='icon-input-header'>Choose con</div>
+      <div className='icon-input-header'>{icon_title}</div>
 
       <ul className='icon-container '>
         { Icons.map((e, i) => <li key={i}>
           {<Icon icon={e} onClick={closeHandler} />}
          </li>) }
       </ul>
-
-      {/* <button className='cancel-button'
-        onClick={() => closeHandler}
-      >
-        {display}
-      </button> */}
-
-      <input className='cancel-button' type='button' value={display} onClick={closeHandler} />
+      <input className='cancel-button' type='button' value={button_display} onClick={closeHandler} />
 
     </div>
   )

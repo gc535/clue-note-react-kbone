@@ -7,7 +7,7 @@ import { labels } from '../localization'
 const Nav = () => {
 
   return (
-    <div className='bg-color-red'>
+    <div className='nav-container'>
       <div className='content'>
         <LocaleDropDown />
         <ResetButton />

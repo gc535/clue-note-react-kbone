@@ -1,19 +1,21 @@
 
-.player-content {
+.weapon-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
-.player-table-header {
+  
+.weapon-table-header {
   display: flex;
   background-color: blue;
   justify-content: center;
   padding: 0.3rem;
 }
 
-.player-table-content {
+.weapon-table-content {
   justify-content: center;  
 }
+
+
 
   

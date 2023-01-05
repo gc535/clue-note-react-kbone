@@ -5,24 +5,24 @@ import { Context } from '../context/context'
 import { labels } from '../localization'
 import { numPlayers } from '../constant'
 
-import './charactor.css'
+import './room.css'
 import './table.css'
 
-const CharactorTable = () => {
+const RoomTable = () => {
   const { locale } = useContext(Context)
-  var charactors = labels.charactor[locale]
-  var header = labels.charactor_header[locale]
+  var rooms = labels.room[locale]
+  var header = labels.room_header[locale]
 
   useEffect(() => {
-    charactors = labels.charactor[locale]
-    header = labels.charactor_header[locale]
+    rooms = labels.room[locale]
+    header = labels.room_header[locale]
   }, [locale])
 
   return (
-    <div className="charactor-content">
-      <div className='charactor-table-header'><span>{header}</span></div>
+    <div className="room-content">
+      <div className='room-table-header'><span>{header}</span></div>
       <table className='table-content' >
-      <tbody>{charactors.map((c, i) => 
+      <tbody>{rooms.map((c, i) => 
         (<tr key={i}>
           <th>{c}</th>
           {[...Array(numPlayers)].map((e, i) => <td key={i}>{<TableInput />}</td>)}
@@ -33,4 +33,4 @@ const CharactorTable = () => {
   )
 }
 
-export default CharactorTable
+export default RoomTable

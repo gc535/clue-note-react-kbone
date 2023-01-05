@@ -14,7 +14,7 @@ const Curtain = () => {
 
   return (
     <div 
-      className="bg-color-green curtain-container curtain-position "
+      className="curtain-container curtain-position "
       style={{ 
                overflow: 'hidden',
                height: showCurtain ? "100%" : "0px",

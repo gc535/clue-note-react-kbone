@@ -6,7 +6,7 @@ import { labels } from '../localization'
 import { numPlayers } from '../constant'
 
 import './player.css'
-
+import './table.css'
 
 const PlayerTable = () => {
   const { locale } = useContext(Context)
@@ -19,9 +19,9 @@ const PlayerTable = () => {
   }, [locale])
 
   return (
-    <div className="bg-color-green player-content">
-      <div className='bg-color-blue player-table-header'><span>{header}</span></div>
-      <table className='player-table-content bg-color-yellow' >
+    <div className="player-content">
+      <div className='player-table-header'><span>{header}</span></div>
+      <table className='player-table-content' >
       <tbody> 
         <tr>
           <th>{player}</th>

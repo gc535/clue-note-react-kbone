@@ -1,19 +1,21 @@
 
-.player-content {
+.room-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
-.player-table-header {
+  
+.room-table-header {
   display: flex;
-  background-color: blue;
   justify-content: center;
+  background-color: blue;
   padding: 0.3rem;
 }
 
-.player-table-content {
+.room-table-content {
   justify-content: center;  
 }
+
+
 
   

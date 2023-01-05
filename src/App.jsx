@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { Nav, CharactorTable } from "./components"
+import { Nav, CharactorTable, WeaponTable, RoomTable } from "./components"
 import Curtain from './components/curtain/curtain'
 import SelectorPopUp from './components/tables/iconSelect'
 import PlayerInputPopUp from './components/tables/playerInput'
@@ -8,15 +8,16 @@ import { Context } from './components/context/context'
 
 const App = () => {
   return (
-    <div className='app bg-color-purple'>
+    <div className='app '>
       <SelectorPopUp />
       <PlayerInputPopUp />
       <Nav />
       <Curtain />
       <PlayerTable />
       <CharactorTable />
+      <WeaponTable />
+      <RoomTable />
     </div>
-
   )
 }
 

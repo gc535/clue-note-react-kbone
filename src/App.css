@@ -4,6 +4,7 @@
   max-width: 1080px; 
   width: 100%;
   margin: 0 auto;
+  padding-bottom: 40px;  /* to not be covered by bottom curve corner */
 }
 
 .popup-canvas {

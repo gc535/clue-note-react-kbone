@@ -1,4 +1,8 @@
 
+.nav-container {
+  border: 2px solid gray;
+}
+
 .content {
   display: flex;
   height: 20px;
@@ -10,7 +14,6 @@
   margin-left: 20px;
   margin-right: 20px;
   padding: 10px 0 ;
-  background-color: green;
 }
 
 .content div:first-child {
@@ -53,15 +56,15 @@
 
 .button-style {
   display: flex;
-  height: 30px;
-  width: 50px;
+  height: auto;
+  width: 40px;
   caret-color: transparent;
-  border-width: 3px;
-  border-color: green;
-  border-radius: 10px;
-  background-color: yellow;
+  border: 2px solid gray;
+  border-radius: 8px;
+  background-color: blue;
+  color: yellow;
   text-align: center;
-  font-size: small;
+  font-size: xx-small;
   justify-content: center;
   padding: 0.1rem;
   margin: 0.1rem;

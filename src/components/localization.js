@@ -29,6 +29,21 @@ export const labels = {
     'ch': '取消',
   },
 
+  submit: {
+    'en': 'Submit',
+    'ch': '確定',
+  },
+
+  choose_icon: {
+    'en': 'Choose Icon',
+    'ch': '選擇標記',
+  },
+
+  type_input: {
+    'en': 'Input Player Lable',
+    'ch': '輸入玩家標識',
+  },
+
   player_header: {
     'en': 'Player',
     'ch': '玩家',

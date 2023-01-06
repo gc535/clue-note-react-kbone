@@ -36,3 +36,9 @@
 .bg-color-purple {
   background-color: purple;
 }
+
+@font-face {
+  font-family: "Wood";
+  src: local("CarvedWood"),
+    url("./fonts/CARVEDWOODRegular.ttf") format("truetype");
+}

@@ -44,7 +44,7 @@ const SelectorPopUp = () => {
   };
 
   return (
-    <div className='icon-popup-box icon-popup-position popup-slide-in' 
+    <div className='icon-popup-box icon-popup-position popup-slide-in icon-popup-box-background' 
       style={{visibility: show ? "visible" : "hidden", top: show ? "10%" : "-20%"}}
     > 
       <div className='icon-input-header'>{icon_title}</div>
@@ -65,7 +65,7 @@ const Icon = ({icon, onClick}) => {
 
   return (
     <div>
-      <img className='icon-item' 
+      <img className='icon-item icon-item-background' 
         src={icon} 
         onClick={()=> {
           console.log("selection made")

@@ -1,5 +1,8 @@
 
 .input-popup-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 85%;
   max-width: 500px;
   max-height: 400px;
@@ -8,9 +11,6 @@
   padding-right: 0.5rem;
   padding-bottom: 1rem;
   row-gap: 1rem;
-  background: rgba(0, 0, 0, 0.9);
-  align-items: center;
-  justify-content: top;
 }
 
 .input-popup-position{
@@ -18,6 +18,19 @@
   flex-direction: column;
   left: 50%;
   transform: translate(-50%, 0);
+}
+
+.input-popup-box-background {
+  background-image: url(https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
+  background-size: cover;
+}
+
+
+.player-input-header {
+  padding: 1.5rem 0 ;
+  font-size: large;
+  color: #cdaa7d;
+  font-family: "Wood";
 }
 
 .form-input-container {
@@ -44,9 +57,10 @@
 }
 
 .hint {
+  font-size: small;
+  font-family: "Wood";
   text-align: center;
-  font-size: x-small;
-  color: gray;
+  color: #cdaa7d;
 }
 
 .form-button-container {
@@ -65,9 +79,13 @@
   bottom: 20%;
   width: 80px;
   height: 30px;
-  border-color: white;
+  font-size: small;
+  font-family: "Wood";
+  text-align: center;
+  color: #cdaa7d;  
+  border-color: #cdaa7d;
   border-radius: 10px;
-  background-color: white;
+  background-image: url(https://img.freepik.com/free-photo/wooden-texture_1208-334.jpg?w=1060&t=st=1672973047~exp=1672973647~hmac=54d87e18466d1dbf24a3cb789539b08c15b18e46faac28f26468badad60eca86);
   justify-content: center;
   text-align: center;
 }

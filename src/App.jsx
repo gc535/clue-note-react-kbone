@@ -6,6 +6,9 @@ import PlayerInputPopUp from './components/tables/playerInput'
 import PlayerTable from './components/tables/player'
 import { Context } from './components/context/context'
 
+import "./App.css"
+import "./fonts/CARVEDWOODRegular.ttf"
+
 const App = () => {
   return (
     <div className='app '>

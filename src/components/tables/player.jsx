@@ -20,8 +20,8 @@ const PlayerTable = () => {
 
   return (
     <div className="player-content">
-      <div className='player-table-header'><span>{header}</span></div>
-      <table className='player-table-content' >
+      <div className='player-table-header table-header-background'><span>{header}</span></div>
+      <table className='player-table-content player-content-background' >
       <tbody> 
         <tr>
           <th>{player}</th>

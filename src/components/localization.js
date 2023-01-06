@@ -48,6 +48,11 @@ export const labels = {
     'en': 'Player',
     'ch': '玩家',
   },
+
+  input_hint: {
+    'en': '2 charactors max.',
+    'ch': '最多兩個字符',
+  },
   
   player: {
     'en': 'Players',
@@ -65,7 +70,7 @@ export const labels = {
   },
 
   weapon_header: {
-    'en': 'weapon',
+    'en': 'Weapon',
     'ch': '武器',
   },
 
@@ -75,7 +80,7 @@ export const labels = {
   },
 
   room_header: {
-    'en': 'room',
+    'en': 'Room',
     'ch': '房间',
   },
 

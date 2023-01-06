@@ -20,8 +20,8 @@ const CharactorTable = () => {
 
   return (
     <div className="charactor-content">
-      <div className='charactor-table-header'><span>{header}</span></div>
-      <table className='table-content' >
+      <div className='charactor-table-header table-header-background'><span>{header}</span></div>
+      <table className='table-content table-content-background' >
       <tbody>{charactors.map((c, i) => 
         (<tr key={i}>
           <th>{c}</th>
@@ -34,3 +34,4 @@ const CharactorTable = () => {
 }
 
 export default CharactorTable
+

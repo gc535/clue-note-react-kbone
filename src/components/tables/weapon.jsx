@@ -20,8 +20,8 @@ const WeaponTable = () => {
 
   return (
     <div className="weapon-content">
-      <div className='weapon-table-header'><span>{header}</span></div>
-      <table className='table-content' >
+      <div className='weapon-table-header table-header-background'><span>{header}</span></div>
+      <table className='table-content table-content-background' >
       <tbody>{weapons.map((c, i) => 
         (<tr key={i}>
           <th>{c}</th>

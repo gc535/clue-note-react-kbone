@@ -24,6 +24,11 @@ const PlayerInputPopUp = () => {
     input_title = labels.type_input[locale]
   }, [locale])
 
+  var hint_display = labels.input_hint[locale]
+  useEffect(() => {
+    hint_display = labels.input_hint[locale]
+  }, [locale])
+
   var cancel_display = labels.cancel[locale]
   useEffect(() => {
     cancel_display = labels.cancel[locale]
@@ -43,17 +48,21 @@ const PlayerInputPopUp = () => {
   const handleSubmit = () => {
     console.log(value)
     if (playerInputRequest.handler) {
-      playerInputRequest.handler(value.slice(0,max_char))
+      if (value === "") {
+        playerInputRequest.handler("N/A")                       // pass empty space to handler
+      } else {
+        playerInputRequest.handler(value.slice(0, max_char))  // pass 2 char value to handler
+      }
     }
     setValue("")
     closeHandler()
   }
 
   return (
-    <div className='input-popup-box input-popup-position popup-slide-in' 
+    <div className='input-popup-box input-popup-position popup-slide-in input-popup-box-background' 
       style={{visibility: show ? "visible" : "hidden", top: show ? "10%" : "-20%"}}
     > 
-      <div className='icon-input-header'>{input_title}</div>
+      <div className='player-input-header'>{input_title}</div>
       
       <form>
         <div className='form-input-container'>
@@ -62,7 +71,7 @@ const PlayerInputPopUp = () => {
             maxLength='4' 
             value={value}
             onChange={(e) => setValue(e.target.value)} />  
-          <label className='hint'>(2 charactors max.)</label>
+          <label className='hint'>{`(${hint_display})`}</label>
         </div>
         <div className='form-button-container'>
           <input className='player-input-button' type='button' value={submit_display} onClick={() => handleSubmit()}/>

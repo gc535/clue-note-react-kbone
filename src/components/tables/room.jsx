@@ -20,8 +20,8 @@ const RoomTable = () => {
 
   return (
     <div className="room-content">
-      <div className='room-table-header'><span>{header}</span></div>
-      <table className='table-content' >
+      <div className='room-table-header table-header-background'><span>{header}</span></div>
+      <table className='table-content table-content-background' >
       <tbody>{rooms.map((c, i) => 
         (<tr key={i}>
           <th>{c}</th>

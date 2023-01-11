@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react'
 import { Context } from '../context/context'
+import { nil } from '../constant'
 
-import nil from '../../../img/icons/nil.png'
 import './input.css'
 
 export const TableInput = () => {

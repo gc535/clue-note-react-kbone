@@ -39,8 +39,8 @@
   padding: 0;
   margin: 0;
   margin-right: auto;
+  caret-color: transparent;
   font-size: small;
-  text-align: center;
   justify-content: center;
   align-items: center;
   background-color: #171717;
@@ -80,9 +80,9 @@
   border-radius: 50%;
   box-shadow: inset -3px -3px 3px -3px rgba(255,255,255,1), inset 6px 6px 6px -6px rgba(80,80,80,0), 0px 0px 5px 4px rgba(0,0,0,1);
   color: #fff6c0;
-  text-align: center;
   font-size: xx-small;
   justify-content: center;
+  align-items: center;
   padding: 0.1rem;
   margin: 0.1rem;
 }

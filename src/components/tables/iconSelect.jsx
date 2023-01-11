@@ -1,15 +1,14 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { Context } from '../context/context'
 import { labels } from '../localization'
+import { nil } from '../constant'
 
 import './iconSelect.css'
 
-import nil from '../../../img/icons/nil.png'
 import mul from '../../../img/icons/mul.svg'
 import sub from '../../../img/icons/sub.svg'
 import add from '../../../img/icons/add.svg'
 import div from '../../../img/icons/div.svg'
-
 
 const Icons = [
   nil, add, sub, mul, div, add, sub, mul, div, add, sub, mul, div, add, sub, mul, div, add, sub, mul, div, add, sub, mul, div, add, sub, mul, div
@@ -54,7 +53,7 @@ const SelectorPopUp = () => {
           {<Icon icon={e} onClick={closeHandler} />}
          </li>) }
       </ul>
-      <input className='cancel-button' type='button'  value={button_display} onClick={closeHandler} />
+      <label className='cancel-button' onClick={closeHandler} >{button_display}</label>
 
     </div>
   )
@@ -68,8 +67,6 @@ const Icon = ({icon, onClick}) => {
       <img className='icon-item icon-item-background' 
         src={icon} 
         onClick={()=> {
-          console.log("selection made")
-          console.log(icon)
           if (iconInputRequest.handler) {
             iconInputRequest.handler(icon)
           }

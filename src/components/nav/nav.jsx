@@ -47,7 +47,7 @@ const LocaleDropDown = ({changefont}) => {
       //   {lang.map((l, i) => <option key={i} value={l.code}>{l.tag}</option>)}
       // </select>
       <div id="test-id" className='locale-input-container'>
-        <input className='locale-input-button' type='button' value={labels.language[locale]} onClick={() => setShowDropdown(!showDropdown)}/>
+        <label className='locale-input-button' onClick={() => setShowDropdown(!showDropdown)}>{labels.language[locale]}</label>
         <ul className='locale-input-dropdown'
           style={{ 
             overflow: 'hidden',
@@ -71,7 +71,7 @@ const ResetButton = () => {
 
   return (
     <div>
-      <input className='button-style' type='button' value={display} onClick={() => setClearInput(true)}/>
+      <label className='button-style' onClick={() => setClearInput(true)}>{display}</label>
     </div>
 
   )
@@ -87,7 +87,7 @@ function ShowHideButton() {
 
   return (
     <div>
-      <input className='button-style' type='button' value={display} onClick={() => setHide(!hide)}/>
+      <label className='button-style' onClick={() => setHide(!hide)}>{display}</label>
     </div>
 
   )

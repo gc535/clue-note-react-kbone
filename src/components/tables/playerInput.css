@@ -76,19 +76,18 @@
   display: flex;
   position: relative;
   caret-color: transparent;
-  margin-top: 40px;
-  bottom: 20%;
+  margin-top: 20px;
+  margin-bottom: 20px;
   width: 80px;
   height: 30px;
-  font-size: small;
+  font-size: medium;
   font-family: var(--carve-font);
-  text-align: center;
   color: #cdaa7d;  
-  border-color: #cdaa7d;
+  border: 2px solid #cdaa7d;
   border-radius: 10px;
   background-image: url(https://img.freepik.com/free-photo/wooden-texture_1208-334.jpg?w=1060&t=st=1672973047~exp=1672973647~hmac=54d87e18466d1dbf24a3cb789539b08c15b18e46faac28f26468badad60eca86);
   justify-content: center;
-  text-align: center;
+  align-items: center;
 }
 
 .popup-slide-in {

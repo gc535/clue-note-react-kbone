@@ -73,8 +73,8 @@ const PlayerInputPopUp = () => {
           <label className='hint'>{`(${hint_display})`}</label>
         </div>
         <div className='form-button-container'>
-          <input className='player-input-button' type='button' value={submit_display} onClick={() => handleSubmit()}/>
-          <input className='player-input-button' type='button' value={cancel_display} onClick={() => closeHandler()} />
+          <label className='player-input-button' onClick={() => handleSubmit()}>{submit_display}</label>
+          <label className='player-input-button' onClick={() => closeHandler()}>{cancel_display}</label>
         </div>
       </form>
 

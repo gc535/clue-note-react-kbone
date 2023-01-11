@@ -4,7 +4,7 @@ export const Context = React.createContext();
 
 
 export const ContextProvider = ({children}) =>{
-  const [ locale, setLocale ] = useState('ch')
+  const [ locale, setLocale ] = useState('en')
   const [ hide, setHide ] = useState(false)
   const [ clearInput, setClearInput ] = useState(true)
   const [ iconInputRequest, setIconInputRequest ] = useState({hasRequest: false, handler: null})

@@ -54,7 +54,7 @@ const SelectorPopUp = () => {
           {<Icon icon={e} onClick={closeHandler} />}
          </li>) }
       </ul>
-      <input className='cancel-button' type='button' value={button_display} onClick={closeHandler} />
+      <input className='cancel-button' type='button'  value={button_display} onClick={closeHandler} />
 
     </div>
   )

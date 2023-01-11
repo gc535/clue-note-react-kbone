@@ -3,13 +3,14 @@ import './nav.css'
 import '../../App.css'
 import { Context } from '../context/context'
 import { labels } from '../localization'
+import { font_style } from '../constant'
 
-const Nav = () => {
+const Nav = ({changefont}) => {
 
   return (
     <div className='nav-container'>
       <div className='content'>
-        <LocaleDropDown />
+        <LocaleDropDown changefont={changefont} />
         <ResetButton />
         <ShowHideButton />
       {/* <div onClick={clickHandle}>跳转</div> */}
@@ -18,9 +19,10 @@ const Nav = () => {
   )
 }
 
-const LocaleDropDown = () => {
+const LocaleDropDown = ({changefont}) => {
   const { locale, setLocale } = useContext(Context)
   var lang = labels.locale[locale]
+
 
   const [ showDropdown, setShowDropdown ] = useState(false)
 
@@ -36,6 +38,7 @@ const LocaleDropDown = () => {
 
   const handleSelect = (newLang) => {
     setLocale(newLang.code)
+    changefont(font_style[newLang.code])
     setShowDropdown(false)
 }
  
@@ -43,7 +46,7 @@ const LocaleDropDown = () => {
       // <select id='locale' className='locale-input-dropdown' onChange={() => handleChange()}>
       //   {lang.map((l, i) => <option key={i} value={l.code}>{l.tag}</option>)}
       // </select>
-      <div className='locale-input-container'>
+      <div id="test-id" className='locale-input-container'>
         <input className='locale-input-button' type='button' value={labels.language[locale]} onClick={() => setShowDropdown(!showDropdown)}/>
         <ul className='locale-input-dropdown'
           style={{ 

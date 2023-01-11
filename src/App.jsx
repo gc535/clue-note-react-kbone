@@ -5,16 +5,19 @@ import SelectorPopUp from './components/tables/iconSelect'
 import PlayerInputPopUp from './components/tables/playerInput'
 import PlayerTable from './components/tables/player'
 import { Context } from './components/context/context'
+import { font_style } from './components/constant'
 
 import "./App.css"
-import "./fonts/CARVEDWOODRegular.ttf"
+
 
 const App = () => {
+  const [ fontStyle, setFontStyle ] = useState(font_style.en)
+
   return (
-    <div className='app '>
+    <div className='app ' style={fontStyle}>
       <SelectorPopUp />
       <PlayerInputPopUp />
-      <Nav />
+      <Nav changefont={setFontStyle}/>
       <Curtain />
       <PlayerTable />
       <CharactorTable />

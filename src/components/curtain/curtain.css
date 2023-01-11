@@ -4,7 +4,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgba(100, 100, 100, 1);
+  background-image: url(https://www.slidebackground.com/uploads/metal/dark-colored-used-metal-powerpoint-backgrounds-.jpg);
+  background-size: cover;
 }
 
 .curtain-content {
@@ -33,4 +34,16 @@
 .curtain-icon {
   height: 100px;
   width: 100px;  
+}
+
+.quiet-text {
+
+		display: block;
+		width: 100%;
+		color: #5d5139;
+		font-family: 'Mrs Saint Delafield', cursive;
+		line-height: 102px;
+		margin-bottom: -20px;
+		text-align: center;
+
 }

@@ -30,7 +30,7 @@
   padding: 1.5rem 0 ;
   font-size: large;
   color: #cdaa7d;
-  font-family: "Wood";
+  font-family: var(--carve-font);
 }
 
 .form-input-container {
@@ -54,11 +54,12 @@
   align-items: center;
   color: black;
   background-color: white;
+  font-family: var(--letter-font);
 }
 
 .hint {
   font-size: small;
-  font-family: "Wood";
+  font-family: var(--carve-font);
   text-align: center;
   color: #cdaa7d;
 }
@@ -80,7 +81,7 @@
   width: 80px;
   height: 30px;
   font-size: small;
-  font-family: "Wood";
+  font-family: var(--carve-font);
   text-align: center;
   color: #cdaa7d;  
   border-color: #cdaa7d;

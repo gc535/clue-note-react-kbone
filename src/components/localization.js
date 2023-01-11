@@ -76,7 +76,7 @@ export const labels = {
 
   weapon: {
     'en': ['Knife', 'Candlestick', 'Revolver', 'Rope', 'Lead Pipe', 'Wrench'],
-    'ch': ['刀', '燭台', '左輪手槍', '繩', '鉛水管', '扳鉗'],
+    'ch': ['刀', '燭台', '左輪手槍', '繩', '鉛水管', '板鉗'],
   },
 
   room_header: {
@@ -86,6 +86,6 @@ export const labels = {
 
   room: {
     'en': ['Kitchen', 'Ballroom	', 'Conservatory', 'Dining Room', 'Billiard Room', 'Library', 'Hall', 'Lounge', 'Study'],
-    'ch': ['廚房', '舞廳', '溫室', '飯廳', '桌球室', '圖書室', '大堂', '休息室', '書房'],
+    'ch': ['廚房', '舞廳', '溫室', '飯廳', '撞球室', '圖書室', '大堂', '休息室', '書房'],
   },
 }

@@ -50,7 +50,7 @@ export const PlayerInput = ({id}) => {
     <div className='player-input-container'>
       <div 
         className='player-input'
-        onClick={() => { console.log(player); clickHandler()} }>{player}</div>
+        onClick={() => clickHandler()}>{player}</div>
     </div>
   )
 }

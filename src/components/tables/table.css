@@ -1,7 +1,7 @@
 span {
   font-size: medium;
   color: #cdaa7d;
-  font-family: "Wood";
+  font-family: var(--carve-font);
 }
 
 tr {
@@ -11,10 +11,11 @@ tr {
 th {
   border: 1px solid #999;
   padding: 0 0.1rem;
-  word-break: break-all;
+  word-break: break-word;
   max-width: 25%;
   text-align: left;
   font-size: xx-small;
+  font-family: var(--letter-font);
 }
 
 td {
@@ -22,7 +23,9 @@ td {
   padding: 0.1rem;
   text-align: center;
   width: 12.5%;
+  font-family: var(--letter-font);
 }
+/* YingZhuiXingShu.ttf */
 
 .table-header-background {
   background-size: cover;

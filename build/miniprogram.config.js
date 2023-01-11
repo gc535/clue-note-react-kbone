@@ -29,7 +29,7 @@ module.exports = {
 	appExtraConfig: {
         sitemapLocation: 'sitemap.json',
 	},
-    global: {},
+    global: { wx: true },
     pages: {},
     optimization: {
 		domSubTreeLevel: 10,

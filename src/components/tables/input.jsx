@@ -1,12 +1,12 @@
 import React, { useState, useContext, useEffect } from 'react'
 import { Context } from '../context/context'
-import { nil } from '../constant'
+import { ICONS } from '../constant'
 
 import './input.css'
 
 export const TableInput = () => {
   const { clearInput, setClearInput, setIconInputRequest } = useContext(Context) 
-  const [icon, setIcon] = useState(nil)
+  const [icon, setIcon] = useState(ICONS[0])
 
   const clickHandler = () => {
     setIconInputRequest({hasRequest: true, handler: setIcon})
@@ -15,7 +15,7 @@ export const TableInput = () => {
 
   useEffect(() => {
     if (clearInput) {
-      setIcon(nil)
+      setIcon(ICONS[0])
     }
   }, [clearInput])
 

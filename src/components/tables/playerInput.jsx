@@ -46,6 +46,8 @@ const PlayerInputPopUp = () => {
   };
 
   const handleSubmit = () => {
+    console.log("submit user input")
+    console.log(value)
     if (playerInputRequest.handler) {
       if (value === "") {
         playerInputRequest.handler("N/A")                       // pass empty space to handler
@@ -69,7 +71,7 @@ const PlayerInputPopUp = () => {
             type="text" 
             maxLength='4' 
             value={value}
-            onChange={(e) => setValue(e.target.value)} />  
+            onInput={(e) => {console.log("oninput"); console.log(e.target.value); setValue(e.target.value)}} />  
           <label className='hint'>{`(${hint_display})`}</label>
         </div>
         <div className='form-button-container'>

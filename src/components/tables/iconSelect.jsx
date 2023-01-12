@@ -1,18 +1,9 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { Context } from '../context/context'
 import { labels } from '../localization'
-import { nil } from '../constant'
+import { ICONS } from '../constant'
 
 import './iconSelect.css'
-
-import mul from '../../../img/icons/mul.svg'
-import sub from '../../../img/icons/sub.svg'
-import add from '../../../img/icons/add.svg'
-import div from '../../../img/icons/div.svg'
-
-const Icons = [
-  nil, add, sub, mul, div, add, sub, mul, div, add, sub, mul, div, add, sub, mul, div, add, sub, mul, div, add, sub, mul, div, add, sub, mul, div
-]
 
 const SelectorPopUp = () => {
   const { locale, iconInputRequest, setIconInputRequest } = useContext(Context)
@@ -49,7 +40,7 @@ const SelectorPopUp = () => {
       <div className='icon-input-header'>{icon_title}</div>
 
       <ul className='icon-container '>
-        { Icons.map((e, i) => <li key={i}>
+        { ICONS.map((e, i) => <li key={i}>
           {<Icon icon={e} onClick={closeHandler} />}
          </li>) }
       </ul>

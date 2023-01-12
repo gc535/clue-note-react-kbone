@@ -5,7 +5,7 @@ span {
 }
 
 tr {
-  height: 14px;
+  height: 20px;
 }
 
 th {
@@ -14,7 +14,7 @@ th {
   word-break: break-word;
   max-width: 25%;
   text-align: left;
-  font-size: xx-small;
+  font-size: small;
   font-family: var(--letter-font);
 }
 

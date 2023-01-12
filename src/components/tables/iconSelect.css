@@ -47,9 +47,9 @@
 
 .icon-item{
   border: 1px solid #999;
-  padding: 0.4rem;
-  height: 18px;
-  width: 18px;
+  padding: 0;
+  width: 22px;
+  object-fit: fill;
 }
 
 .icon-item-background {

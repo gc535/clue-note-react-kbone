@@ -17,14 +17,14 @@ const Welcome = () => {
 
   window.onShareAppMessage = () => {
     return {
-      title: "分享 ‘妙探寻凶笔记’ 给好友",
+      title: "玩 ‘妙探寻凶’ 试试用这个做记录吧",
       imageUrl: "https://images.pcgamingwiki.com/d/d4/Clue-Cluedo_The_Classic_Mystery_Game_cover.jpg"
     }
   }
 
   window.onShareTimeline = () => {
     return {
-      title: "分享 ‘妙探寻凶笔记’ 到朋友圈",
+      title: "玩 ‘妙探寻凶’ 试试用这个做记录吧",
     }
   }
 

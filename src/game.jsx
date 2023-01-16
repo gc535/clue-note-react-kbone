@@ -10,7 +10,7 @@ export default function createApp() {
 
   window.onShareAppMessage = () => {
     return {
-      title: "分享 ‘妙探寻凶笔记’ 给好友",
+      title: "玩 ‘妙探寻凶’ 试试用这个做记录吧",
       path: "/pages/index/index",
       imageUrl: "https://images.pcgamingwiki.com/d/d4/Clue-Cluedo_The_Classic_Mystery_Game_cover.jpg"
     }
@@ -18,7 +18,7 @@ export default function createApp() {
 
   window.onShareTimeline = () => {
     return {
-      title: "分享 ‘妙探寻凶笔记’ 到朋友圈",
+      title: "玩 ‘妙探寻凶’ 试试用这个做记录吧",
     }
   }
 

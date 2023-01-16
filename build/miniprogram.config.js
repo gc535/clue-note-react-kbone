@@ -6,10 +6,8 @@ module.exports = {
     origin: 'https://test.miniprogram.com',
     entry: '/',
     router: {
-        home: [
-            '/(home|index)?',
-            '/index.html',
-            '/test/(home|index)',
+        index: [
+            '/pages/index/index'
         ],
         other: [
             '/test/list/:id',
@@ -17,19 +15,22 @@ module.exports = {
         ],
     },
     redirect: {
-        notFound: 'home',
-        accessDenied: 'home',
+        notFound: 'index',
+        accessDenied: 'index',
     },
     generate: {
         autoBuildNpm: 'npm',
     },
     app: {
-        navigationBarTitleText: '妙探寻凶笔记本',
+        navigationBarTitleText: '妙探寻凶笔记',
     },
 	appExtraConfig: {
         // sitemapLocation: 'sitemap.json',
 	},
-    global: {},
+    global: {
+        share: true,
+        shareTimeline: true
+    },
     pages: {},
     optimization: {
 		domSubTreeLevel: 10,
@@ -43,7 +44,7 @@ module.exports = {
 		attrValueReduce: 5000,
 	},
     projectConfig: {
-        projectname: '妙探寻凶笔记本',
+        projectname: '妙探寻凶笔记',
         appid: '',
     },
 }

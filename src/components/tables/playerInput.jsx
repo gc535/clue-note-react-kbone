@@ -46,8 +46,6 @@ const PlayerInputPopUp = () => {
   };
 
   const handleSubmit = () => {
-    console.log("submit user input")
-    console.log(value)
     if (playerInputRequest.handler) {
       if (value === "") {
         playerInputRequest.handler("N/A")                       // pass empty space to handler

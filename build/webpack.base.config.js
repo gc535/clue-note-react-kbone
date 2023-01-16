@@ -4,7 +4,7 @@ module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
     index: path.resolve(__dirname, '../src/index.jsx'),
-    log: path.resolve(__dirname, '../src/log.jsx'),
+    game: path.resolve(__dirname, '../src/game.jsx'),
   },
   output: {
     path: path.resolve(__dirname, '../dist/web'),

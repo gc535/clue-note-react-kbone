@@ -20,7 +20,7 @@ const Nav = ({changefont}) => {
 }
 
 const LocaleDropDown = ({changefont}) => {
-  const { locale, setLocale } = useContext(Context)
+  const { hide, locale, setLocale } = useContext(Context)
   var lang = labels.locale[locale]
 
 
@@ -31,23 +31,22 @@ const LocaleDropDown = ({changefont}) => {
     lang = labels.locale[locale]
   }, [locale])
 
-  const handleChange = () => {
-      var lang = document.getElementById("locale").value;
-      setLocale(lang)
-  }
-
   const handleSelect = (newLang) => {
     setLocale(newLang.code)
     changefont(font_style[newLang.code])
     setShowDropdown(false)
-}
+  }
+
+  const handleClick = () => {
+    if (hide) {
+      return
+    }
+    setShowDropdown(!showDropdown)
+  }
  
   return (
-      // <select id='locale' className='locale-input-dropdown' onChange={() => handleChange()}>
-      //   {lang.map((l, i) => <option key={i} value={l.code}>{l.tag}</option>)}
-      // </select>
       <div id="test-id" className='locale-input-container'>
-        <label className='locale-input-button' onClick={() => setShowDropdown(!showDropdown)}>{labels.language[locale]}</label>
+        <label className='locale-input-button' onClick={() => handleClick()}>{labels.language[locale]}</label>
         <ul className='locale-input-dropdown'
           style={{ 
             overflow: 'hidden',
@@ -93,14 +92,14 @@ function ShowHideButton() {
   )
 }
 
-//function clickHandle() {
-//  if ('undefined' != typeof wx && wx.getSystemInfoSync) {
-//    wx.navigateTo({
-//      url: '../log/index?id=1',
-//    })
-//  } else {
-//    location.href = 'log.html'
-//  }
-//}
+// function clickHandle() {
+//   if ('undefined' != typeof wx && wx.getSystemInfoSync) {
+//     wx.navigateTo({
+//       url: '../welcome/index?id=1',
+//     })
+//   } else {
+//     location.href = 'welcome.html'
+//   }
+// }
 
 export default Nav

@@ -71,7 +71,8 @@ const PlayerInputPopUp = () => {
             type="text" 
             maxLength='4' 
             value={value}
-            onInput={(e) => {console.log("oninput"); console.log(e.target.value); setValue(e.target.value)}} />  
+            onInput={(e) => setValue(e.target.value)} 
+            onChange={(e) => setValue(e.target.value)} />  
           <label className='hint'>{`(${hint_display})`}</label>
         </div>
         <div className='form-button-container'>

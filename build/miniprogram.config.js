@@ -24,12 +24,12 @@ module.exports = {
         autoBuildNpm: 'npm',
     },
     app: {
-        navigationBarTitleText: 'miniprogram-project',
+        navigationBarTitleText: '妙探寻凶笔记本',
     },
 	appExtraConfig: {
-        sitemapLocation: 'sitemap.json',
+        // sitemapLocation: 'sitemap.json',
 	},
-    global: { wx: true },
+    global: {},
     pages: {},
     optimization: {
 		domSubTreeLevel: 10,
@@ -43,7 +43,7 @@ module.exports = {
 		attrValueReduce: 5000,
 	},
     projectConfig: {
-        projectname: 'kbone-template-react',
+        projectname: '妙探寻凶笔记本',
         appid: '',
     },
 }

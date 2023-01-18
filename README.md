@@ -1,4 +1,4 @@
-# wechat miniprograme used for note taking when playing boardgame "Clue/Cluedo"
+# wechat miniprograme -- Boardgame "Clue/Cluedo" note taking
 #### developed with react + kbone framework
 
 ## To start

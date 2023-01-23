@@ -6,11 +6,11 @@ import './input.css'
 
 export const TableInput = () => {
   const { clearInput, setClearInput, setIconInputRequest, 
-          iconInputRequest, playerInputRequest } = useContext(Context) 
+          reset, iconInputRequest, playerInputRequest } = useContext(Context) 
   const [icon, setIcon] = useState(ICONS[0])
 
   const clickHandler = () => {
-    if (iconInputRequest.hasRequest || playerInputRequest.hasRequest) {
+    if (reset || iconInputRequest.hasRequest || playerInputRequest.hasRequest) {
       return 
     }
     setIconInputRequest({hasRequest: true, handler: setIcon})
@@ -32,11 +32,11 @@ export const TableInput = () => {
 
 export const PlayerInput = ({id}) => {
   const { clearInput, setClearInput, setPlayerInputRequest, 
-          iconInputRequest, playerInputRequest } = useContext(Context) 
+          reset, iconInputRequest, playerInputRequest } = useContext(Context) 
   const [ player, setPlayer ] = useState(id)
 
   const clickHandler = () => {
-    if (iconInputRequest.hasRequest || playerInputRequest.hasRequest) {
+    if (reset || iconInputRequest.hasRequest || playerInputRequest.hasRequest) {
       return 
     }
     setPlayerInputRequest({hasRequest: true, handler: setPlayer})

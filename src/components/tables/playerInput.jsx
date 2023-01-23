@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState, useEffect, useContext, useRef } from 'react'
 import { Context } from '../context/context'
 import { labels } from '../localization'
 
@@ -7,6 +7,7 @@ import './playerInput.css'
 
 const PlayerInputPopUp = () => {
   const { locale, playerInputRequest, setPlayerInputRequest } = useContext(Context)
+  const inputField = useRef(null)
   const [show, setShow] = useState(false)
   const [ value, setValue ] = useState("")
   const max_char = 2
@@ -41,8 +42,9 @@ const PlayerInputPopUp = () => {
   //////////////// locale display related ////////////////
 
   const closeHandler = () => {
-    setShow(false);
-    setPlayerInputRequest({hasRequest: false, handler: null});
+    inputField.current.blur()
+    setShow(false)
+    setPlayerInputRequest({hasRequest: false, handler: null})
   };
 
   const handleSubmit = () => {
@@ -66,6 +68,7 @@ const PlayerInputPopUp = () => {
       <form>
         <div className='form-input-container'>
           <input className='player-input-field'  
+            ref={inputField}
             type="text" 
             maxLength='4' 
             value={value}
@@ -74,8 +77,8 @@ const PlayerInputPopUp = () => {
           <label className='hint'>{`(${hint_display})`}</label>
         </div>
         <div className='form-button-container'>
-          <label className='player-input-button' onClick={() => handleSubmit()}>{submit_display}</label>
-          <label className='player-input-button' onClick={() => closeHandler()}>{cancel_display}</label>
+          <button className='player-input-button' onClick={() => handleSubmit()}>{submit_display}</button>
+          <button className='player-input-button' onClick={() => closeHandler()}>{cancel_display}</button>
         </div>
       </form>
 

@@ -1,87 +1,48 @@
-
-.input-popup-box{
+.reset-popup-box{
   display: flex;
   align-items: center;
   justify-content: center;
   border: 2px solid #cdaa7d;
   border-radius: 15px;
-  width: 85%;
+  width: 75%;
   max-width: 500px;
   max-height: 400px;
   padding-top: 1rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  padding-bottom: 1rem;
-  row-gap: 1rem;
+  padding-bottom: 2rem;
+  row-gap: 0.2rem;
+  background: rgba(0, 0, 0, 0.9);
 }
 
-.input-popup-position{
+.reset-popup-position{
   position: fixed;
   flex-direction: column;
   left: 50%;
   transform: translate(-50%, 20%);
 }
 
-.input-popup-box-background {
+.reset-popup-box-background {
   background-image: url(https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
   background-size: cover;
 }
 
 
-.player-input-header {
+.reset-header {
   padding: 1.5rem 0 ;
   font-size: large;
   color: #cdaa7d;
   font-family: var(--carve-font);
 }
 
-.form-input-container {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem 0.5rem;
-  padding: 0.2rem;
-  justify-content: center;
-  align-items: center;
-}
-
-.player-input-field {
-  border: 3px;
-  border-color: white;
-  height: 40px;
-  padding: 0;
-  margin: 0;
-  font-size: x-small;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  color: black;
-  background-color: white;
-  font-family: var(--letter-font);
-}
-
-.hint {
-  font-size: small;
-  font-family: var(--carve-font);
-  text-align: center;
-  color: #cdaa7d;
-}
-
-.form-button-container {
-  display: flex;
-  gap: 0.5rem 3rem;
-  padding: 0.2rem;
-  justify-content: center;
-  align-items: center;
-}
-
-.player-input-button{
+.reset-button{
   display: flex;
   position: relative;
   caret-color: transparent;
   margin-top: 20px;
   margin-bottom: 20px;
-  width: 80px;
-  height: 30px;
+  width: 120px;
+  height: 40px;
   font-size: medium;
   font-family: var(--carve-font);
   color: #cdaa7d;  
@@ -92,8 +53,10 @@
   align-items: center;
 }
 
-.popup-slide-in {
+
+.reset-popup-slide-in {
   transition: top 200ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
   overflow: hidden;
 }
+
 

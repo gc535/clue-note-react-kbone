@@ -24,6 +24,16 @@ export const labels = {
     'ch': '重置',
   },
 
+  reset_title: {
+    'en': 'Choose Reset Option',
+    'ch': '选择重置方式',
+  },
+
+  reset_options: {
+    'en': ['Keep Player Name', 'Reset All Inputs', 'Cancel'],
+    'ch': ['保留玩家名称', '重置所有', '取消'],
+  },
+
   cancel: {
     'en': 'Cancel',
     'ch': '取消',

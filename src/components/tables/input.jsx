@@ -14,11 +14,11 @@ export const TableInput = () => {
       return 
     }
     setIconInputRequest({hasRequest: true, handler: setIcon})
-    setClearInput(false)
+    setClearInput("none")
   }
 
   useEffect(() => {
-    if (clearInput) {
+    if (clearInput === "all" || clearInput === "icon") {
       setIcon(ICONS[0])
     }
   }, [clearInput])
@@ -40,11 +40,11 @@ export const PlayerInput = ({id}) => {
       return 
     }
     setPlayerInputRequest({hasRequest: true, handler: setPlayer})
-    setClearInput(false)
+    setClearInput("none")
   }
   
   useEffect(() => {
-    if (clearInput) {
+    if (clearInput === "all") {
       setPlayer(id)
     }
   }, [clearInput])

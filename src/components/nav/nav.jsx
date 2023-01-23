@@ -61,16 +61,24 @@ const LocaleDropDown = ({changefont}) => {
 }
 
 const ResetButton = () => {
-  const { locale, setClearInput } = useContext(Context)
+  const { locale, hide, setReset, iconInputRequest, playerInputRequest } = useContext(Context)
   
   var display = labels.reset[locale]
   useEffect(() => {
     display = labels.reset[locale]
   }, [locale])
 
+  const handleClick = () => {
+    // ignore reset click if any input popups or hide option is active
+    if (hide || iconInputRequest.hasRequest || playerInputRequest.hasRequest) {
+      return 
+    }
+    setReset(true)
+  }
+
   return (
     <div>
-      <label className='button-style' onClick={() => setClearInput(true)}>{display}</label>
+      <label className='button-style' onClick={() => handleClick()}>{display}</label>
     </div>
 
   )

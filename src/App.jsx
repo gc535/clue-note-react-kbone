@@ -1,9 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { Nav, CharactorTable, WeaponTable, RoomTable } from "./components"
-import Curtain from './components/curtain/curtain'
-import SelectorPopUp from './components/tables/iconSelect'
-import PlayerInputPopUp from './components/tables/playerInput'
-import PlayerTable from './components/tables/player'
+import { Nav, ResetPopUp, Curtain, SelectorPopUp, PlayerInputPopUp, 
+         PlayerTable, CharactorTable, WeaponTable, RoomTable } from "./components"
 import { Context } from './components/context/context'
 import { font_style } from './components/constant'
 
@@ -15,6 +12,7 @@ const App = () => {
 
   return (
     <div className='app ' style={fontStyle}>
+      <ResetPopUp />
       <SelectorPopUp />
       <PlayerInputPopUp />
       <Nav changefont={setFontStyle}/>

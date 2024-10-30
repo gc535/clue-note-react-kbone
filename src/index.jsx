@@ -31,7 +31,7 @@ const Welcome = () => {
   return (
     <div className='welcome-container'>
       <img className='cover-image bg-color-black' 
-        src="https://images.pcgamingwiki.com/d/d4/Clue-Cluedo_The_Classic_Mystery_Game_cover.jpg">
+        src="https://img2.baidu.com/it/u=3242785742,2587132282&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=889">
       </img>
       <label className='start-button ' onClick={() => start()}>Start</label>
     </div>

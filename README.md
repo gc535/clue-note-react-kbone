@@ -38,6 +38,13 @@ To deploy, simply use the deploy option in the mini app dev tool.
 │  └─ index.jsx      // welcome page
 ```
 
+
+## routing
+dev run routing defined in webpack.base.config.js
+miniapp routing defined in webpack.mp.config.js
+This info is easily deducible from the initial kbone code files. So we keep note here for future reference.
+
+
 ## License
 
 MIT 
